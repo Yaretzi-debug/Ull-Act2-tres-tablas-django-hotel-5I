@@ -1,70 +1,110 @@
-1. Procedimiento para crear carpeta del Proyecto: UIII_Hotel_1301
+¡Claro! Aquí tienes la primera parte de tu proyecto Django para Cinépolis, siguiendo tus instrucciones detalladas.
+
+### 1. Procedimiento para crear carpeta del Proyecto: UIII_Hotel_1301
+
 Abre tu terminal o línea de comandos y navega hasta la ubicación donde deseas guardar tu proyecto. Luego, ejecuta el siguiente comando:
-code
-Bash
+
+```bash
 mkdir UIII_Hotel_1301
-2. Procedimiento para abrir VS Code sobre la carpeta UIII_Hotel_1301
+```
+
+### 2. Procedimiento para abrir VS Code sobre la carpeta UIII_Hotel_1301
+
 Navega dentro de la carpeta que acabas de crear y abre VS Code:
-code
-Bash
+
+```bash
 cd UIII_Hotel_1301
 code .
-Esto abrirá VS Code con la carpeta UIII_Hotel_1301 como tu espacio de trabajo.
-3. Procedimiento para abrir terminal en VS Code
-Dentro de VS Code, puedes abrir la terminal yendo a Terminal > New Terminal en el menú superior, o usando el atajo de teclado Ctrl + (la tilde invertida).
-4. Procedimiento para crear carpeta entorno virtual “.venv” desde terminal de VS Code
+```
+
+Esto abrirá VS Code con la carpeta `UIII_Hotel_1301` como tu espacio de trabajo.
+
+### 3. Procedimiento para abrir terminal en VS Code
+
+Dentro de VS Code, puedes abrir la terminal yendo a `Terminal` > `New Terminal` en el menú superior, o usando el atajo de teclado `Ctrl + ` (la tilde invertida).
+
+### 4. Procedimiento para crear carpeta entorno virtual “.venv” desde terminal de VS Code
+
 En la terminal de VS Code, ejecuta:
-code
-Bash
+
+```bash
 python -m venv .venv
-Esto creará una carpeta llamada .venv dentro de tu proyecto, que contendrá un entorno virtual aislado para tus dependencias de Python.
-5. Procedimiento para activar el entorno virtual
+```
+
+Esto creará una carpeta llamada `.venv` dentro de tu proyecto, que contendrá un entorno virtual aislado para tus dependencias de Python.
+
+### 5. Procedimiento para activar el entorno virtual
+
 Para activar el entorno virtual, los comandos varían según tu sistema operativo:
-Windows:
-code
-Bash
-.venv\Scripts\activate
-macOS/Linux:
-code
-Bash
-source .venv/bin/activate
-Una vez activado, verás (.venv) al principio de tu prompt de la terminal, indicando que el entorno virtual está activo.
-6. Procedimiento para activar intérprete de python (dentro del entorno virtual)
-Con el entorno virtual activado, Python ya estará usando el intérprete dentro de .venv. Para asegurarte y configurarlo en VS Code, puedes ir a la paleta de comandos (Ctrl+Shift+P o Cmd+Shift+P), buscar "Python: Select Interpreter" y elegir el que se encuentre en tu carpeta .venv.
-7. Procedimiento para instalar Django
+
+*   **Windows:**
+    ```bash
+    .venv\Scripts\activate
+    ```
+*   **macOS/Linux:**
+    ```bash
+    source .venv/bin/activate
+    ```
+Una vez activado, verás `(.venv)` al principio de tu prompt de la terminal, indicando que el entorno virtual está activo.
+
+### 6. Procedimiento para activar intérprete de python (dentro del entorno virtual)
+
+Con el entorno virtual activado, Python ya estará usando el intérprete dentro de `.venv`. Para asegurarte y configurarlo en VS Code, puedes ir a la paleta de comandos (`Ctrl+Shift+P` o `Cmd+Shift+P`), buscar "Python: Select Interpreter" y elegir el que se encuentre en tu carpeta `.venv`.
+
+### 7. Procedimiento para instalar Django
+
 Con el entorno virtual activado, instala Django:
-code
-Bash
+
+```bash
 pip install Django
-8. Procedimiento para crear proyecto backend_Hotel sin duplicar carpeta
-En la raíz de tu proyecto UIII_Hotel_1301 (con el entorno virtual activado), ejecuta:
-code
-Bash
+```
+
+### 8. Procedimiento para crear proyecto backend_Hotel sin duplicar carpeta
+
+En la raíz de tu proyecto `UIII_Hotel_1301` (con el entorno virtual activado), ejecuta:
+
+```bash
 django-admin startproject backend_Hotel .
-El . al final indica que el proyecto se creará en el directorio actual, evitando una carpeta anidada.
-9. Procedimiento para ejecutar servidor en el puerto 1301
-Navega a la carpeta donde se encuentra el archivo manage.py (que es la raíz de tu proyecto UIII_Hotel_1301) y ejecuta:
-code
-Bash
+```
+
+El `.` al final indica que el proyecto se creará en el directorio actual, evitando una carpeta anidada.
+
+### 9. Procedimiento para ejecutar servidor en el puerto 1301
+
+Navega a la carpeta donde se encuentra el archivo `manage.py` (que es la raíz de tu proyecto `UIII_Hotel_1301`) y ejecuta:
+
+```bash
 python manage.py runserver 1301
-10. Procedimiento para copiar y pegar el link en el navegador
+```
+
+### 10. Procedimiento para copiar y pegar el link en el navegador
+
 Cuando ejecutes el servidor, verás un mensaje como:
-code
-Code
+
+```
 Starting development server at http://127.0.0.1:1301/
 Quit the server with CTRL-BREAK.
-Copia la URL (por ejemplo, http://127.0.0.1:1301/) y pégala en tu navegador web. Deberías ver la página de bienvenida de Django.
-11. Procedimiento para crear aplicación app_Hotel
-Asegúrate de estar en la misma carpeta que manage.py (la raíz de UIII_Hotel_1301) y ejecuta:
-code
-Bash
+```
+
+Copia la URL (por ejemplo, `http://127.0.0.1:1301/`) y pégala en tu navegador web. Deberías ver la página de bienvenida de Django.
+
+### 11. Procedimiento para crear aplicación app_Hotel
+
+Asegúrate de estar en la misma carpeta que `manage.py` (la raíz de `UIII_Hotel_1301`) y ejecuta:
+
+```bash
 python manage.py startapp app_Hotel
-Esto creará la carpeta app_Hotel con los archivos básicos para la aplicación.
-12. Aquí el modelo models.py
-Aquí está el contenido de tu models.py para la aplicación app_Hotel. (Nota: Agregué el __str__ para Huesped correctamente indentado). Por ahora, nos centraremos en el modelo Categoria que definiremos más adelante, pero estos son los modelos que tenías.
-app_Hotel/models.py
-code
-Python
+```
+
+Esto creará la carpeta `app_Hotel` con los archivos básicos para la aplicación.
+
+### 12. Aquí el modelo models.py
+
+Aquí está el contenido de tu `models.py` para la aplicación `app_Hotel`. (Nota: Agregué el `__str__` para `Huesped` correctamente indentado). Por ahora, nos centraremos en el modelo `Categoria` que definiremos más adelante, pero estos son los modelos que tenías.
+
+**`app_Hotel/models.py`**
+
+```python
 from django.db import models
 
 # ==========================================
@@ -117,20 +157,31 @@ class Categoria(models.Model):
 
     def __str__(self):
         return self.nombre
-12.5 Procedimiento para realizar las migraciones (makemigrations y migrate)
-Primero, asegúrate de haber guardado el archivo models.py con el nuevo modelo Categoria. Luego, en tu terminal (con el entorno virtual activado), ejecuta:
-code
-Bash
+
+```
+
+### 12.5 Procedimiento para realizar las migraciones (makemigrations y migrate)
+
+Primero, asegúrate de haber guardado el archivo `models.py` con el nuevo modelo `Categoria`. Luego, en tu terminal (con el entorno virtual activado), ejecuta:
+
+```bash
 python manage.py makemigrations app_Hotel
 python manage.py migrate
-makemigrations crea los archivos de migración que le dicen a Django cómo crear las tablas en la base de datos, y migrate ejecuta esos archivos para crear las tablas reales.
-13. Primero trabajamos con el MODELO: CATEGORÍA
-Como se solicitó, nos enfocaremos en el modelo Categoria para las operaciones CRUD.
-14. En views de app_Hotel crear las funciones con sus códigos correspondientes
-Aquí están las funciones en app_Hotel/views.py para el CRUD de categorías. No usaremos forms.py según tu indicación, así que manejaremos los datos directamente de request.POST.
-app_Hotel/views.py
-code
-Python
+```
+
+`makemigrations` crea los archivos de migración que le dicen a Django cómo crear las tablas en la base de datos, y `migrate` ejecuta esos archivos para crear las tablas reales.
+
+### 13. Primero trabajamos con el MODELO: CATEGORÍA
+
+Como se solicitó, nos enfocaremos en el modelo `Categoria` para las operaciones CRUD.
+
+### 14. En views de app_Hotel crear las funciones con sus códigos correspondientes
+
+Aquí están las funciones en `app_Hotel/views.py` para el CRUD de categorías. No usaremos `forms.py` según tu indicación, así que manejaremos los datos directamente de `request.POST`.
+
+**`app_Hotel/views.py`**
+
+```python
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Categoria # Importamos solo Categoria por ahora
 
@@ -171,19 +222,28 @@ def borrar_categoria(request, id):
     return render(request, 'app_Hotel/categoria/borrar_categoria.html', {'categoria': categoria})
 
 # (Las funciones para Huespedes y Habitaciones se dejarán pendientes)
-15. Crear la carpeta “templates” dentro de “app_Hotel”
-Dentro de la carpeta app_Hotel, crea una nueva carpeta llamada templates.
-16. En la carpeta templates crear los archivos html (base.html, header.html, navbar.html, footer.html, inicio.html)
-Dentro de app_Hotel/templates, crea los siguientes archivos:
-base.html
-header.html
-navbar.html
-footer.html
-inicio.html
-17. En el archivo base.html agregar bootstrap para css y js
-app_Hotel/templates/base.html
-code
-Html
+
+```
+
+### 15. Crear la carpeta “templates” dentro de “app_Hotel”
+
+Dentro de la carpeta `app_Hotel`, crea una nueva carpeta llamada `templates`.
+
+### 16. En la carpeta templates crear los archivos html (base.html, header.html, navbar.html, footer.html, inicio.html)
+
+Dentro de `app_Hotel/templates`, crea los siguientes archivos:
+
+*   `base.html`
+*   `header.html`
+*   `navbar.html`
+*   `footer.html`
+*   `inicio.html`
+
+### 17. En el archivo base.html agregar bootstrap para css y js
+
+**`app_Hotel/templates/base.html`**
+
+```html
 {% load static %}
 <!DOCTYPE html>
 <html lang="es">
@@ -232,10 +292,13 @@ Html
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
-18. En el archivo navbar.html incluir las opciones
-app_Hotel/templates/navbar.html
-code
-Html
+```
+
+### 18. En el archivo navbar.html incluir las opciones
+
+**`app_Hotel/templates/navbar.html`**
+
+```html
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
         <a class="navbar-brand" href="{% url 'inicio_hotel' %}">
@@ -287,10 +350,13 @@ Html
         </div>
     </div>
 </nav>
-19. En el archivo footer.html incluir derechos de autor, fecha del sistema y “Creado por Cristal Yaretzi Tagle Pacheco, Cbtis 128” y mantenerla fija al final de la página.
-app_Hotel/templates/footer.html
-code
-Html
+```
+
+### 19. En el archivo footer.html incluir derechos de autor, fecha del sistema y “Creado por Cristal Yaretzi Tagle Pacheco, Cbtis 128” y mantenerla fija al final de la página.
+
+**`app_Hotel/templates/footer.html`**
+
+```html
 <footer class="footer">
     <div class="container">
         <span class="text-light">&copy; {% now "Y" %} Sistema de Administración Hotel. Todos los derechos reservados.</span>
@@ -298,10 +364,13 @@ Html
         <span class="text-light">Creado por Cristal Yaretzi Tagle Pacheco, Cbtis 128</span>
     </div>
 </footer>
-20. En el archivo inicio.html se usa para colocar información del sistema más una imagen tomada desde la red sobre cinepolis.
-app_Hotel/templates/inicio.html
-code
-Html
+```
+
+### 20. En el archivo inicio.html se usa para colocar información del sistema más una imagen tomada desde la red sobre cinepolis.
+
+**`app_Hotel/templates/inicio.html`**
+
+```html
 {% extends 'app_Hotel/base.html' %}
 
 {% block title %}Inicio - Sistema Hotel{% endblock %}
@@ -333,12 +402,17 @@ Html
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Cinepolis.svg/1200px-Cinepolis.svg.png" class="img-fluid rounded" alt="Logo de Cinépolis" style="max-height: 300px;">
 </div>
 {% endblock %}
-21. Crear la subcarpeta carpeta categoria dentro de app_Hotel\templates.
-Dentro de app_Hotel/templates, crea una nueva carpeta llamada categoria. La ruta será app_Hotel/templates/categoria.
-22. Crear los archivos html con su código correspondientes de (agregar_categoria.html, ver_categorias.html mostrar en tabla con los botones ver, editar y borrar, actualizar_categoria.html, borrar_categoria.html) dentro de app_Hotel\templates\categoria.
-app_Hotel/templates/categoria/agregar_categoria.html
-code
-Html
+```
+
+### 21. Crear la subcarpeta carpeta categoria dentro de app_Hotel\templates.
+
+Dentro de `app_Hotel/templates`, crea una nueva carpeta llamada `categoria`. La ruta será `app_Hotel/templates/categoria`.
+
+### 22. Crear los archivos html con su código correspondientes de (agregar_categoria.html, ver_categorias.html mostrar en tabla con los botones ver, editar y borrar, actualizar_categoria.html, borrar_categoria.html) dentro de app_Hotel\templates\categoria.
+
+**`app_Hotel/templates/categoria/agregar_categoria.html`**
+
+```html
 {% extends 'app_Hotel/base.html' %}
 
 {% block title %}Agregar Categoría{% endblock %}
@@ -373,9 +447,11 @@ Html
     </div>
 </div>
 {% endblock %}
-app_Hotel/templates/categoria/ver_categorias.html
-code
-Html
+```
+
+**`app_Hotel/templates/categoria/ver_categorias.html`**
+
+```html
 {% extends 'app_Hotel/base.html' %}
 
 {% block title %}Ver Categorías{% endblock %}
@@ -420,9 +496,11 @@ Html
     {% endif %}
 </div>
 {% endblock %}
-app_Hotel/templates/categoria/actualizar_categoria.html
-code
-Html
+```
+
+**`app_Hotel/templates/categoria/actualizar_categoria.html`**
+
+```html
 {% extends 'app_Hotel/base.html' %}
 
 {% block title %}Actualizar Categoría{% endblock %}
@@ -457,9 +535,11 @@ Html
     </div>
 </div>
 {% endblock %}
-app_Hotel/templates/categoria/borrar_categoria.html
-code
-Html
+```
+
+**`app_Hotel/templates/categoria/borrar_categoria.html`**
+
+```html
 {% extends 'app_Hotel/base.html' %}
 
 {% block title %}Borrar Categoría{% endblock %}
@@ -486,13 +566,19 @@ Html
     </div>
 </div>
 {% endblock %}
-23. No utilizar forms.py.
-Confirmado. Hemos manejado los datos directamente en las vistas usando request.POST.
-24. Procedimiento para crear el archivo urls.py en app_Hotel con el código correspondiente para acceder a las funciones de views.py para operaciones de crud en categorias.
-Dentro de la carpeta app_Hotel, crea un archivo llamado urls.py.
-app_Hotel/urls.py
-code
-Python
+```
+
+### 23. No utilizar forms.py.
+
+Confirmado. Hemos manejado los datos directamente en las vistas usando `request.POST`.
+
+### 24. Procedimiento para crear el archivo urls.py en app_Hotel con el código correspondiente para acceder a las funciones de views.py para operaciones de crud en categorias.
+
+Dentro de la carpeta `app_Hotel`, crea un archivo llamado `urls.py`.
+
+**`app_Hotel/urls.py`**
+
+```python
 from django.urls import path
 from . import views
 
@@ -504,11 +590,15 @@ urlpatterns = [
     path('categorias/actualizar/<int:id>/', views.actualizar_categoria, name='actualizar_categoria'),
     path('categorias/borrar/<int:id>/', views.borrar_categoria, name='borrar_categoria'),
 ]
-25. Procedimiento para agregar app_Hotel en settings.py de backend_Hotel
-Abre backend_Hotel/settings.py y busca la lista INSTALLED_APPS. Agrega 'app_Hotel' a esta lista.
-backend_Hotel/settings.py (fragmento)
-code
-Python
+```
+
+### 25. Procedimiento para agregar app_Hotel en settings.py de backend_Hotel
+
+Abre `backend_Hotel/settings.py` y busca la lista `INSTALLED_APPS`. Agrega `'app_Hotel'` a esta lista.
+
+**`backend_Hotel/settings.py` (fragmento)**
+
+```python
 # Application definition
 
 INSTALLED_APPS = [
@@ -520,11 +610,15 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'app_Hotel', # ¡Aquí está tu aplicación!
 ]
-26. Realizar las configuraciones correspondiente a urls.py de backend_Hotel para enlazar con app_Hotel
-Abre backend_Hotel/urls.py (el del proyecto principal) y enlaza las URLs de app_Hotel.
-backend_Hotel/urls.py
-code
-Python
+```
+
+### 26. Realizar las configuraciones correspondiente a urls.py de backend_Hotel para enlazar con app_Hotel
+
+Abre `backend_Hotel/urls.py` (el del proyecto principal) y enlaza las URLs de `app_Hotel`.
+
+**`backend_Hotel/urls.py`**
+
+```python
 from django.contrib import admin
 from django.urls import path, include # Importa include
 
@@ -532,11 +626,15 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('app_Hotel.urls')), # Enlaza las URLs de app_Hotel
 ]
-27. Procedimiento para registrar los modelos en admin.py y volver a realizar las migraciones.
-Primero, registra Categoria en app_Hotel/admin.py.
-app_Hotel/admin.py
-code
-Python
+```
+
+### 27. Procedimiento para registrar los modelos en admin.py y volver a realizar las migraciones.
+
+Primero, registra `Categoria` en `app_Hotel/admin.py`.
+
+**`app_Hotel/admin.py`**
+
+```python
 from django.contrib import admin
 from .models import Empleado, Huesped, Habitacion, Categoria
 
@@ -545,18 +643,25 @@ admin.site.register(Empleado)
 admin.site.register(Huesped)
 admin.site.register(Habitacion)
 admin.site.register(Categoria)
-Volver a realizar las migraciones (si hiciste cambios en admin.py no es estrictamente necesario, pero por si acaso o por buenas prácticas si hubo cambios previos en modelos)
-code
-Bash
+```
+
+**Volver a realizar las migraciones (si hiciste cambios en `admin.py` no es estrictamente necesario, pero por si acaso o por buenas prácticas si hubo cambios previos en modelos)**
+
+```bash
 python manage.py makemigrations
 python manage.py migrate
-Si no hubo cambios en los modelos Empleado, Huesped, Habitacion o Categoria desde la última vez que ejecutaste makemigrations y migrate, es posible que no se generen nuevas migraciones.
-28. Utilizar colores suaves, atractivos y modernos, el código de las páginas web sencillas.
-Se ha intentado usar colores de Bootstrap (primary, success, warning, danger, dark, secondary) para darle un aspecto moderno y limpio a las páginas, y el código HTML es sencillo.
-29. Al inicio crear la estructura completa de carpetas y archivos.
+```
+Si no hubo cambios en los modelos `Empleado`, `Huesped`, `Habitacion` o `Categoria` desde la última vez que ejecutaste `makemigrations` y `migrate`, es posible que no se generen nuevas migraciones.
+
+### 28. Utilizar colores suaves, atractivos y modernos, el código de las páginas web sencillas.
+
+Se ha intentado usar colores de Bootstrap (`primary`, `success`, `warning`, `danger`, `dark`, `secondary`) para darle un aspecto moderno y limpio a las páginas, y el código HTML es sencillo.
+
+### 29. Al inicio crear la estructura completa de carpetas y archivos.
+
 Ya se ha guiado a través de la creación de las carpetas y archivos esenciales. La estructura debería verse así:
-code
-Code
+
+```
 UIII_Hotel_1301/
 ├── .venv/
 ├── backend_Hotel/
@@ -588,11 +693,22 @@ UIII_Hotel_1301/
 │   └── views.py
 ├── manage.py
 └── db.sqlite3 (se crea después de las migraciones)
-30. Proyecto totalmente funcional.
+```
+
+### 30. Proyecto totalmente funcional.
+
 ¡El esqueleto del proyecto para el CRUD de categorías está listo para ser funcional!
-31. Finalmente ejecutar servidor en el puerto 1301
-Desde la raíz de tu proyecto UIII_Hotel_1301 (donde está manage.py), y con el entorno virtual activado:
-code
-Bash
+
+### 31. Finalmente ejecutar servidor en el puerto 1301
+
+Desde la raíz de tu proyecto `UIII_Hotel_1301` (donde está `manage.py`), y con el entorno virtual activado:
+
+```bash
 python manage.py runserver 1301
-Ahora, visita http://127.0.0.1:1301/ en tu navegador. Deberías ver la página de inicio. Desde allí, el menú de navegación te permitirá acceder a la sección de "Categorías" para "Agregar Categoría" y "Ver Categorías".
+```
+
+Ahora, visita `http://127.0.0.1:1301/` en tu navegador. Deberías ver la página de inicio. Desde allí, el menú de navegación te permitirá acceder a la sección de "Categorías" para "Agregar Categoría" y "Ver Categorías".
+
+Aquí tienes una vista previa de cómo se vería la interfaz con los estilos implementados:
+
+Página de inicio:
